@@ -1,6 +1,7 @@
 package com.example.genjulypone
 
 import android.content.Intent
+import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
@@ -17,28 +18,32 @@ class MainActivity : AppCompatActivity() {
         buttonSubmit.setOnClickListener {
 
 
-            var un = editTextUsername.text.toString()
-
+           /* var un = editTextUsername.text.toString()
               //Toast.makeText(this,"username is $un",Toast.LENGTH_LONG).show()
-
               textViewUsername.setText(un)
 
             var myIntent = Intent(this,SecondActivity::class.java)
             myIntent.putExtra("keyun", un)
-            startActivity(myIntent)
+            startActivity(myIntent)*/
+
+            /*var i = Intent(Intent.ACTION_DIAL, Uri.parse("tel:8338888083"))
+            startActivity(i)*/
+
+            var i = Intent(Intent.ACTION_VIEW, Uri.parse("https://yahoo.com"))
+            startActivity(i)
 
         }
     }
 
     override fun onStart() {
         super.onStart()
-        Log.i("mytag","Activity Started")
+        Log.e("mytag","Activity Started")
 
     }
 
     override fun onResume() {
         super.onResume()
-        Log.i("mytag","Activity resume")
+        Log.w("mytag","Activity resume")
 
     }
 

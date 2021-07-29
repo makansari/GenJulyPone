@@ -10,9 +10,9 @@ class SecondActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_second)
 
-      var result =  intent.extras?.getString("keyun")
+ /*     var result =  intent.extras?.getString("keyun")
 
         Toast.makeText(this, result,Toast.LENGTH_LONG).show()
-        textViewSecondRes.setText(result)
+        textViewSecondRes.setText(result)*/
     }
 }
